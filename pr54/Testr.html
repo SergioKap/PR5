@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Обчислення значень функції F</title>
+	<meta charset="utf-8">
+	<style>
+		#button-container {
+			margin-top: 60px;
+			text-align: left;
+		}
+
+		#button-container a {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #F00;
+			color: white;
+			text-decoration: none;
+			border-radius: 4px;
+		}
+	</style>
+    <script>
+        function Завдання1() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</head>
+<body>
+	<h1>Обчислення значень функції F</h1>
+
+	<label for="startX">Початкове значення x:</label>
+	<input type="number" id="startX" min="-Infinity" max="Infinity" step="0.01" value="-6">
+	<br>
+	<label for="endX">Кінцеве значення x:</label>
+	<input type="number" id="endX" min="-Infinity" max="Infinity" step="0.01" value="6">
+	<br>
+	<label for="step">Крок зміни значень x:</label>
+	<input type="number" id="step" min="0.01" max="Infinity" step="0.01" value="2">
+	<br>
+	<button onclick="calculateValues()">Обчислити</button>
+
+	<div id="result-container"></div>
+
+	
+
+	<script>
+		function calculateFunction(x) {
+			if (x < 0) {
+				return Math.pow(Math.tan(x), 3);
+			} else if (x === 0) {
+				return Math.pow(Math.PI,3);
+			} else {
+				return Math.sqrt(x) - 1 / x;
+			}
+		}
+
+		function calculateValues() {
+			var startX = parseFloat(document.getElementById("startX").value);
+			var endX = parseFloat(document.getElementById("endX").value);
+			var step = parseFloat(document.getElementById("step").value);
+
+			var resultContainer = document.getElementById("result-container");
+			resultContainer.innerHTML = ""; 
+
+			for (let x = startX; x <= endX; x += step) {
+				const result = calculateFunction(x);
+				resultContainer.innerHTML += "F(" + x + ") = " + result + "<br>";
+			}
+		}
+	</script>
+    <button onclick="Завдання1()">Завдання1</button>
+</body>
+</html>

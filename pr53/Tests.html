@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Математичні функції й константи</title>
+    <style>
+      #button-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      #button-container a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #F00;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+    </style>
+    <script>
+        function Завдання1() {
+            window.location.href = '../index.html';
+        }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const N = 6; 
+      
+      const e = Math.E;
+      const pi = Math.PI;
+      const lnE = Math.LN10;
+      const log2E = Math.LOG2E;
+      const ln10 = Math.LN10;
+      const ln2 = Math.LN2;
+      const sqrt2 = Math.SQRT2;
+      const sqrt1_2 = Math.SQRT1_2;
+
+      const functions = [
+        Math.pow(42, N),
+        Math.sqrt(4),
+        Math.sqrt(-9),
+        Math.abs(-9),
+        Math.cos(0),
+        Math.cos(Math.PI),
+        Math.acos(0),
+        Math.sin(0),
+        Math.sin(Math.PI / 2),
+        Math.asin(1),
+        Math.tan(Math.PI / 4),
+        Math.atan(1),
+        Math.exp(2),
+        Math.log(Math.pow(e, 2)),
+        Math.log10(100),
+        Math.log2(8),
+        Math.round(Math.tan(Math.PI / 4)),
+        Math.ceil(1.00123),
+        Math.ceil(-3.1234),
+        Math.floor(1.00123),
+        Math.floor(-3.1234),
+        Math.round(1.44),
+        Math.round(1.54),
+        Math.max(4, 2),
+        Math.min(4, 2),
+      ];
+
+      const random = Math.random();
+
+      document.write("<h2>КОНСТАНТИ</h2>");
+      document.write("1. Значення константи е = " + e + "<br>");
+      document.write("2. Значення константи π = " + pi + "<br>");
+      document.write("3. Десятковий логарифм постійної Ейлера (е) = " + lnE + "<br>");
+      document.write("4. Двійковий логарифм постійної Ейлера (е) = " + log2E + "<br>");
+      document.write("5. Натуральний логарифм числа 10 = " + ln10 + "<br>");
+      document.write("6. Натуральний логарифм числа 2 = " + ln2 + "<br>");
+      document.write("7. Корінь квадратний із двох = " + sqrt2 + "<br>");
+      document.write("8. Корінь квадратний з однієї другої = " + sqrt1_2 + "<br>");
+
+      document.write("<h2>ФУНКЦІЇ</h2>");
+      for (let i = N; i < N + 5; i++) {
+        document.write((i + 1) + ". " + functions[i - N] + "<br>");
+      }
+      
+      document.write("<h2>ГЕНЕРАТОР ВИПАДКОВИХ ЧИСЕЛ</h2>");
+      document.write("Формування випадкових чисел в інтервалі [0;1]: y = " + random);
+
+     
+    </script>
+    
+      <button onclick="Завдання1()">Завдання1</button>
+  </body>
+</html>

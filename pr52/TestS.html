@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Цитати відомих письменників</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #quote-container {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px; 
+      }
+      #button-container {
+        display: flex;
+        justify-content: center; 
+        margin-bottom: 20px;
+      }
+      #button-container button {
+        margin: 0 5px; 
+      }
+      #additional-button {
+        background-color: #f00;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    </style>
+    <script>
+        function Завдання1() {
+            window.location.href = '../index.html';
+        }
+    </script>
+  </head>
+  <body>
+    <div id="quote-container">
+      <h5>Для нас дорогі батьки, дорогі діти, близькі, родичі; але всі уявлення про любов до чого-небудь поєднані в одному слові «вітчизна».</h5>
+    </div>
+    <div id="button-container">
+      <button onclick="checkAnswer('Scovoroda')">Г. Сковорода</button>
+      <button onclick="checkAnswer('Golybah')">П. Гольбах</button>
+      <button onclick="checkAnswer('Shevchenko')">Т. Шевченко</button>
+      <button onclick="checkAnswer('Cicero')">Цицерон</button>
+      <button onclick="checkAnswer('Kostenko')">Л. Костенко</button>
+    </div>
+    <div id="button-container">
+        <a class="custom-button" href="PR5/">Завдання 2</a>
+    </div>
+    <script type="text/javascript">
+      function checkAnswer(author) {
+        if (author === "Cicero") {
+          window.alert("Правильно! Це вислів Цицерона.");
+        } else if (author === "Scovoroda" || author === "Golybah" || author === "Shevchenko" || author === "Kostenko") {
+          window.alert("Неправильно! Це вислів Цицерона.");
+        }
+      }
+    </script>
+    <button onclick="Завдання1()">Завдання1</button>
+  </body>
+</html>
